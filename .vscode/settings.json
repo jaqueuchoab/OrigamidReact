@@ -1,0 +1,14 @@
+{
+     //disabling git
+     "git.enabled": false,
+     //deleting of some folders, they will not be permanently deleted, only the file bar will not appear
+     "files.exclude": {
+       "node_modules": true,
+       ".vscode": true,
+       ".gitignore": true,
+       "package.json": true,
+       "package-lock.json": true,
+       "public": true
+     }
+   }
+   
