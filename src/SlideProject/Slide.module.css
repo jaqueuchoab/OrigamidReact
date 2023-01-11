@@ -1,0 +1,36 @@
+.container {
+     overflow: hidden;
+}
+
+.content {
+     display: flex;
+     list-style: none;
+     transition: transform 0.3s ease;
+     padding: 0;
+     margin: 0;
+}
+
+.item {
+     display: flex;
+     justify-content: center;
+     flex-shrink: 0;
+     width: 80%;
+     margin: 0 10%;
+}
+
+.imgSpan {
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav{
+     display: flex;
+     justify-content: space-between;
+     margin: 1rem auto;
+     width: 25rem;
+}
+
+button {
+     color: white;
+     background-color: #483D8B;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
