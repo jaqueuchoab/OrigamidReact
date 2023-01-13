@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from '../Components/Head';
 import styled from 'styled-components';
 
 // Importação do bootstrap

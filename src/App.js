@@ -1,9 +1,13 @@
 import React from 'react';
 import AppCard from './CardProject/AppCard';
+import Head from './Components/Head';
 
 const App = () => {
     return (
-     <AppCard />
+        <div>
+            <Head title="CardAnim"/>
+            <AppCard />
+        </div>
     );
 }
 
