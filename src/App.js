@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from './Components/Head';
 import Form from './FormsChallenge/Form';
+import styled from 'styled-components';
 
 const questions = [
     {
@@ -37,6 +38,27 @@ const questions = [
     },
 ];
 
+const DivContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+`;
+
+const Button = styled.button`
+  margin-top: 10px;
+  border: none;
+  width: 8rem;
+  height: 3rem;
+  color: white;
+  font-size: 16pt;
+  font-weight: 600;
+  font-family: sans-serif;
+  background-color: #41a;
+  border-radius: 4px;
+`;
+
 const App = () => {
     const [next, setNext] = React.useState(0);
     const [display, setDisplay] = React.useState('block');
@@ -49,15 +71,17 @@ const App = () => {
     }
 
     return (
-        <div>
+        <DivContainer>
             <Head title="Forms"/>
 
-            {next !== questions.length ? 
+            {
+            next !== questions.length ? 
             <Form question={questions[next]} value={radio} setValue={setRadio} result={result} setResult={setResult}/>  : 
-            <div><h2>Você acertou {result}/{questions.length}</h2></div>}
+            <div><h2>Você acertou {result}/{questions.length}</h2></div>
+            }
 
-            <button onClick={handleClick} style={{display: `${display}`}}>Próxima</button>
-        </div>
+            <Button onClick={handleClick} style={{display: `${display}`}}>next</ Button>
+        </DivContainer>
     );
 }
 

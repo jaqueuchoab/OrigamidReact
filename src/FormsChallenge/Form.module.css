@@ -1,0 +1,38 @@
+.title {
+    font-family: monospace;
+}
+
+.inputRadio {
+     display: none;
+}
+
+.customRadio {
+     border: 1px solid #fff;
+     width: 20px;
+     height: 20px;
+     display: grid;
+     align-items: center;
+     justify-content: center;
+     border-radius: 50%;
+}
+   
+.customRadio span {
+     transition: 0.5s ease;
+     color: #fff;
+}
+   
+.customRadio span {
+     content: '';
+     width: 10px;
+     height: 10px;
+     background: #fff;
+     border-radius: 50%;
+}
+
+.inputRadio:checked + .customRadio {
+     border-color: #41a;
+}
+   
+.inputRadio:checked + .customRadio span {
+     background: #41a;
+}

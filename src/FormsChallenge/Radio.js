@@ -1,4 +1,5 @@
 import React from "react";
+import formStyle from "./Form.module.css";
 
 const Radio  = ({options, value, setValue, answer, result, setResult, ...props}) => { 
 
@@ -14,14 +15,18 @@ const Radio  = ({options, value, setValue, answer, result, setResult, ...props})
                {options.map((option) => {
                     return (
                          <div>
-                              <label key={option}>
+                              <label className={formStyle.title} style={{ display: "flex", columnGap: "20px" }} key={option}>
                                    <input 
                                         type="radio" 
                                         value={option} 
                                         checked={value === option}
                                         onChange={countResult} 
+                                        className={formStyle.inputRadio}
                                    ></input>
-                                   {option}
+                                   <div className={formStyle.customRadio}>
+                                        <span></span>
+                                   </div>
+                                   <span>{option}</span>
                               </label>
                          </div>
                     );
