@@ -1,9 +1,13 @@
 import React from 'react';
-import AppForm from './FormsChallenge/AppForm';
+// Importação dos componentes essênciais para o tratamento das rotas
 
 const App = () => {
     return (
-        <AppForm />
+        // Definindo as rotas
+
+        <div>
+            
+        </div>
     );
 }
 
