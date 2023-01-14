@@ -4,9 +4,8 @@ import React from 'react';
 const App = () => {
     return (
         // Definindo as rotas
-
         <div>
-            
+            <BrowserRouter ></BrowserRouter>
         </div>
     );
 }
