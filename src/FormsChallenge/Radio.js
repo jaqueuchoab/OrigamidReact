@@ -1,5 +1,4 @@
 import React from "react";
-import UserContext from "../Components/UserContext";
 
 const Radio  = ({options, value, setValue, answer, result, setResult, ...props}) => { 
 

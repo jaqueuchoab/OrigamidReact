@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from './Components/Head';
 import Form from './FormsChallenge/Form';
-import UserContext from './Components/UserContext';
 
 const questions = [
     {
