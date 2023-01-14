@@ -1,19 +1,13 @@
 import React from "react";
 import Radio from "./Radio";
 
-const Form = (questions) => {
-     const [radio, setRadio] = React.useState('');
-
+const Form = ({ question, value, setValue, result, setResult }) => {
      return (
           <>
-               {questions.forEach((question) => {
-                    return (
-                         <fieldset key={question.id}>
-                              <legend>{question.question}</legend>
-                              <Radio options={question.option} value={radio} setValue={setRadio}/>
-                         </fieldset>
-                    );
-               })}
+               <fieldset key={question.id}>
+                    <legend>{question.question}</legend>
+                    <Radio options={question.options} value={value} setValue={setValue} answer={question.answer} result={result} setResult={setResult}/>
+               </fieldset>
           </>
      );
 };

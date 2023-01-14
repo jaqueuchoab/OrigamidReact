@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from './Components/Head';
 import Form from './FormsChallenge/Form';
+import UserContext from './Components/UserContext';
 
 const questions = [
     {
@@ -38,10 +39,25 @@ const questions = [
 ];
 
 const App = () => {
+    const [next, setNext] = React.useState(0);
+    const [display, setDisplay] = React.useState('block');
+    const [radio, setRadio] = React.useState('');
+    const [result, setResult] = React.useState(0);
+
+    function handleClick() {
+        setNext(() => next + 1);
+        next === questions.length - 1 && setDisplay('none');
+    }
+
     return (
         <div>
             <Head title="Forms"/>
-            <Form questions={questions}/>
+
+            {next !== questions.length ? 
+            <Form question={questions[next]} value={radio} setValue={setRadio} result={result} setResult={setResult}/>  : 
+            <div><h2>Você acertou {result}/{questions.length}</h2></div>}
+
+            <button onClick={handleClick} style={{display: `${display}`}}>Próxima</button>
         </div>
     );
 }
